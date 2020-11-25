@@ -36,26 +36,26 @@ class TasksViewModelTest {
         }
     }
 
-    @Test
-    fun addNewTask_setsNewTaskEvent() {
-
-        // When adding a new task
-        tasksViewModel.addNewTask()
-
-        // Then the new task event is triggered
-        val value = tasksViewModel.newTaskEvent.getOrAwaitValue()
-
-        assertThat(value.getContentIfNotHandled(), not(nullValue()))
-    }
-
-    @Test
-    fun setFilterAllTasks_tasksAddViewVisible() {
-        // When the filter type is ALL_TASKS
-        tasksViewModel.setFiltering(TasksFilterType.ALL_TASKS)
-
-        // Then the "Add task" action is visible
-        var value = tasksViewModel.tasksAddViewVisible.getOrAwaitValue()
-        assertThat(value, `is`(true))
-    }
+//    @Test
+//    fun addNewTask_setsNewTaskEvent() {
+//
+//        // When adding a new task
+//        tasksViewModel.addNewTask()
+//
+//        // Then the new task event is triggered
+//        val value = tasksViewModel.newTaskEvent.getOrAwaitValue()
+//
+//        assertThat(value.getContentIfNotHandled(), not(nullValue()))
+//    }
+//
+//    @Test
+//    fun setFilterAllTasks_tasksAddViewVisible() {
+//        // When the filter type is ALL_TASKS
+//        tasksViewModel.setFiltering(TasksFilterType.ALL_TASKS)
+//
+//        // Then the "Add task" action is visible
+//        var value = tasksViewModel.tasksAddViewVisible.getOrAwaitValue()
+//        assertThat(value, `is`(true))
+//    }
 
 }
